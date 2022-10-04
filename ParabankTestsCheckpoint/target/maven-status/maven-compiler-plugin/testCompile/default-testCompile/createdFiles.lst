@@ -1,0 +1,7 @@
+com\Tests\AccountTestPage.class
+com\Tests\RegisteringTestPage.class
+com\Tests\TransferTestPage.class
+com\Pages\AccountPage.class
+com\Base\BasePage.class
+com\Pages\RegisteringPage.class
+com\Pages\TransfersPage.class

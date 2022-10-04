@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.11 on win32)" generated="20220830 22:29:22.332" rpa="false" schemaversion="3">
+<suite id="s1" name="Poke" source="C:\Users\MainUser\Desktop\Testing\POKEAPI\Poke.robot">
+<test id="s1-t1" name="Validação da PokeAPI" line="7">
+<kw name="Consulta de Pokemons" library="Poke">
+<kw name="Verificar name" library="Poke">
+<arg>bulbasaur</arg>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>pokeapi</arg>
+<arg>${HOST}/pokemon-species/${NOME}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20220830 22:29:22.522" level="INFO">Creating Session using : alias=pokeapi, url=https://pokeapi.co/api/v2/pokemon-species/bulbasaur, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220830 22:29:22.521" endtime="20220830 22:29:22.522"/>
+</kw>
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${RESPOSTA}</var>
+<arg>pokeapi</arg>
+<arg>${HOST}/pokemon-species/${NOME}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20220830 22:29:22.616" level="INFO">GET Request : url=https://pokeapi.co/api/v2/pokemon-species/bulbasaur 
+ path_url=/api/v2/pokemon-species/bulbasaur 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20220830 22:29:22.616" level="INFO">GET Response : url=https://pokeapi.co/api/v2/pokemon-species/bulbasaur 
+ status=200, reason=OK 
+ headers={'Date': 'Wed, 31 Aug 2022 01:29:23 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '4986', 'Connection': 'keep-alive', 'alt-svc': 'h3=":443"; ma=86400, h3-29=":443"; ma=86400', 'access-control-allow-origin': '*', 'Cache-Control': 'public, max-age=86400, s-maxage=86400', 'Content-Encoding': 'gzip', 'etag': 'W/"76c2-WmTqCz+on3qYeT4Wg1SWE8AbtsM"', 'function-execution-id': 'evufrn6vh2pz', 'strict-transport-security': 'max-age=31556926', 'x-cloud-trace-context': 'e64150dca5aff88130a22de50a808616', 'x-country-code': 'BR', 'x-orig-accept-language': 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7', 'x-powered-by': 'Express', 'x-served-by': 'cache-cgh11151-CGH', 'x-cache': 'HIT', 'x-cache-hits': '1', 'x-timer': 'S1661909325.896757,VS0,VE13', 'vary': 'Accept-Encoding,cookie,need-authorization, x-fh-requested-host, accept-encoding', 'CF-Cache-Status': 'HIT', 'Age': '39', 'Accept-Ranges': 'bytes', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=hYKdUj%2FDqcpcA7prhhVUhtNPR%2BE8TXNMS5UVyyZ3ZcVngbo6oSkK3qwya9w1JEXLaEPpk7I7yADnYagxVJPgZoWYj%2ByRiPXwFHqo5136E1MUez6PEoLH2jFqetPl2OpKU0u31ZV2Pflg"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '7431feb4bba96aa5-SJP'} 
+ body={"base_happiness":50,"capture_rate":45,"color":{"name":"green","url":"https://pokeapi.co/api/v2/pokemon-color/5/"},"egg_groups":[{"name":"monster","url":"https://pokeapi.co/api/v2/egg-group/1/"},{"name":"plant","url":"https://pokeapi.co/api/v2/egg-group/7/"}],"evolution_chain":{"url":"https://pokeapi.co/api/v2/evolution-chain/1/"},"evolves_from_species":null,"flavor_text_entries":[{"flavor_text":"A strange seed was\nplanted on its\nback at birth.\fThe plant sprouts\nand grows with\nthis POKéMON.","language":{"name":"en","url":"https://pokeapi.co/api/v2/language/9/"},"version":{"name":"red","url":"https://pokeapi.co/api/v2/version/1/"}},{"flavor_text":"A strange seed was\nplanted on its\nback at birth.\fThe plant sprouts\nand grows with\nthis POKéMON.","language":{"name":"en","url":"https://pokeapi.co/api/v2/language/9/"},"version":{"name":"blue","url":"https://pokeapi.co/api/v2/version/2/"}},{"flavor_text":"It can go for days\nwithout eating a\nsingle morsel.\fIn the bulb on\nits back, it\nstores energy.","language":{"name":"en","url":"https://pokeapi.co/api/v2/language/9/"},"version":{"name":"yellow","url":"https://pokeapi.co/api/v2/version/3/"}},{"flavor_text":"The seed on its\nback is filled\nwith nutrients.\fThe seed grows\nsteadily larger as\nits body grows.","language":{"name":"en","url":"https://pokeapi.co/api/v2/language/9/"},"version":{"name":"gold","url":"https://pokeapi.co/api/v2/version/4/"}},{"flavor_text":"It carries a seed\non its back right\nfrom birth. As it\fgrows older, the\nseed also grows\nlarger.","language":{"name":"en","url":"https://pokeapi.co/api/v2/language/9/"},"version":{"name":"silver","url":"https://pokeapi.co/api/v2/version/5/"}},{"flavor_text":"While it is young,\nit uses the\nnutrients that are\fstored in the\nseeds on its back\nin order to grow.","language":{"name":"en","url":"https://pokeapi.co/api/v2/language/9/"},"version":{"name":"crystal","url":"https://pokeapi.co/api/v2/version/6/"}},{"flavor_text":"BULBASAUR can be seen napping in\nbright sunlight.\nThere is a seed on its back.\fBy soaking up the sun’s rays, the seed\ngrows progressively larger.","language":{"name":"en","url":"https://pokeapi.co/api/v2/language/9/"},"version":{"name":"ruby","url":"https://pokeapi.co/api/v2/version/7/"}},{"flavor_text":"BULBASAUR can be seen napping in\nbright sunlight.\nThere is a seed on its back.\fBy soaking up the sun’s rays, the seed\ngrows progressively larger.","language":{"name":"en","url":"https://pokeapi.co/api/v2/language/9/"},"version":{"name":"sapphire","url":"https://pokeapi.co/api/v2/version/8/"}},{"flavor_text":"BULBASAUR can be seen napping in bright\nsunlight. There is a seed on its back.\nBy soaking up the sun’s rays, the seed\ngrows progressively larger.","language":{"name":"en","url":"https://pokeapi.co/api/v2/language/9/"},"version":{"name":"emerald","url":"https://pokeapi.co/api/v2/version/9/"}},{"flavor_text":"There is a plant seed on its back right\nfrom the day this POKéMON is born.\nThe seed slowly grows larger.","language":{"name":"en","url":"https://pokeapi.co/api/v2/language/9/"},"version":{"name":"firered","url":"https://pokeapi.co/api/v2/version/10/"}},{"flavor_text":"A strange seed was planted on its back at\nbirth. The plant sprouts and grows with\nthis POKéMON.","language":{"name":"en","url":"https://pokeapi.co/api/v2/language/9/"},"version":{"name":"leafgreen","url":"https://pokeapi.co/api/v2/version/11/"}},{"flavor_text":"For some time after its birth, it\ngrows by gaining nourishment from\nthe seed on its back.","language":{"name":"en","url":"https://pokeapi.co/api/v2/language/9/"},"version":{"name":"diamond","url":"https://pokeapi.co/api/v2/version/12/"}},{"flavor_text":"For some time after its birth, it\ngrows by gaining nourishment from\nthe seed on its back.","language":{"name":"en","url":"https://pokeapi.co/api/v2/language/9/"},"version":{"name":"pearl","url":"https://pokeapi.co/api/v2/version/13/"}},{"flavor_text":"For some time after its birth, it\ngrows by gaining nourishment from\nthe seed on its back.","language":{"name":"en","url":"https://pokeapi.co/api/v2/language/9/"},"version":{"name":"platinum","url":"https://pokeapi.co/api/v2/version/14/"}},{"flavor_text":"The seed on its back is filled\nwith nutrients. The seed grows\nsteadily larger as its body grows.","language":{"name":"en","url":"https://pokeapi.co/api/v2/language/9/"},"version":{"name":"heartgold","url":"https://pokeapi.co/api/v2/version/15/"}},{"flavor_text":"It carries a seed on its back right\nfrom birth. As it grows older, the\nseed also grows larger.","language":{"name":"en","url":"https://pokeapi.co/api/v2/language/9/"},"version":{"name":"soulsilver","url":"https://pokeapi.co/api/v2/version/16/"}},{"flavor_text":"Au matin de sa vie, la graine sur\nson dos lui fournit les éléments\ndont il a besoin pour grandir.","language":{"name":"fr","url":"https://pokeapi.co/api/v2/language/5/"},"version":{"name":"black","url":"https://pokeapi.co/api/v2/version/17/"}},{"flavor_text":"For some time after its birth, it\ngrows by gaining nourishment from\nthe seed on its back.","language":{"name":"en","url":"https://pokeapi.co/api/v2/language/9/"},"version":{"name":"black","url":"https://pokeapi.co/api/v2/version/17/"}},{"flavor_text":"Au matin de sa vie, la graine sur\nson dos lui fournit les éléments\ndont il a besoin pour grandir.","language":{"name":"fr","url":"https://pokeapi.co/api/v2/language/5/"},"version":{"name":"white","url":"https://pokeapi.co/api/v2/version/18/"}},{"flavor_text":"For some time after its birth, it\ngrows by gaining nourishment from\nthe seed on its back.","language":{"name":"en","url":"https://pokeapi.co/api/v2/language/9/"},"version":{"name":"white","url":"https://pokeapi.co/api/v2/version/18/"}},{"flavor_text":"For some time after its birth, it\ngrows by gaining nourishment from\nthe seed on its back.","language":{"name":"en","url":"https://pokeapi.co/api/v2/language/9/"},"version":{"name":"black-2","url":"https://pokeapi.co/api/v2/version/21/"}},{"flavor_text":"For some time after its birth, it\ngrows by gaining nourishment from\nthe seed on its back.","language":{"name":"en","url":"https://pokeapi.co/api/v2/language/9/"},"version":{"name":"white-2","url":"https://pokeapi.co/api/v2/version/22/"}},{"flavor_text":"うまれたときから　せなかに\nふしぎな　タネが　うえてあって\nからだと　ともに　そだつという。","language":{"name":"ja-Hrkt","url":"https://pokeapi.co/api/v2/language/1/"},"version":{"name":"x","url":"https://pokeapi.co/api/v2/version/23/"}},{"flavor_text":"태어났을 때부터 등에\n이상한 씨앗이 심어져 있으며\n몸과 함께 자란다고 한다.","language":{"name":"ko","url":"https://pokeapi.co/api/v2/language/3/"},"version":{"name":"x","url":"https://pokeapi.co/api/v2/version/23/"}},{"flavor_text":"Il a une étrange graine plantée sur son dos.\nElle grandit avec lui depuis sa naissance.","language":{"name":"fr","url":"https://pokeapi.co/api/v2/language/5/"},"version":{"name":"x","url":"https://pokeapi.co/api/v2/version/23/"}},{"flavor_text":"Dieses Pokémon trägt von Geburt an einen Samen\nauf dem Rücken, der mit ihm keimt und wächst.","language":{"name":"de","url":"https://pokeapi.co/api/v2/language/6/"},"version":{"name":"x","url":"https://pokeapi.co/api/v2/version/23/"}},{"flavor_text":"Una rara semilla le fue plantada en el lomo al nacer.\nLa planta brota y crece con este Pokémon.","language":{"name":"es","url":"https://pokeapi.co/api/v2/language/7/"},"version":{"name":"x","url":"https://pokeapi.co/api/v2/version/23/"}},{"flavor_text":"Alla nascita gli è stato piantato sulla schiena un seme\nraro. La pianta sboccia e cresce con lui.","language":{"name":"it","url":"https://pokeapi.co/api/v2/language/8/"},"version":{"name":"x","url":"https://pokeapi.co/api/v2/version/23/"}},{"flavor_text":"A strange seed was planted on its back at birth.\nThe plant sprouts and grows with this Pokémon.","language":{"name":"en","url":"https://pokeapi.co/api/v2/language/9/"},"version":{"name":"x","url":"https://pokeapi.co/api/v2/version/23/"}},{"flavor_text":"生まれたときから　背中に\n不思議な　タネが　植えてあって\n体と　ともに　育つという。","language":{"name":"ja","url":"https://pokeapi.co/api/v2/language/11/"},"version":{"name":"x","url":"https://pokeapi.co/api/v2/version/23/"}},{"flavor_text":"うまれてから　しばらくの　あいだは\nせなかの　タネから　えいようを\nもらって　おおきく　そだつ。","language":{"name":"ja-Hrkt","url":"https://pokeapi.co/api/v2/language/1/"},"version":{"name":"y","url":"https://pokeapi.co/api/v2/version/24/"}},{"flavor_text":"태어나서부터 얼마 동안은\n등의 씨앗으로부터 영양을\n공급받아 크게 성장한다.","language":{"name":"ko","url":"https://pokeapi.co/api/v2/language/3/"},"version":{"name":"y","url":"https://pokeapi.co/api/v2/version/24/"}},{"flavor_text":"Au matin de sa vie, la graine sur son dos lui fournit\nles éléments dont il a besoin pour grandir.","language":{"name":"fr","url":"https://pokeapi.co/api/v2/language/5/"},"version":{"name":"y","url":"https://pokeapi.co/api/v2/version/24/"}},{"flavor_text":"Nach der Geburt nimmt es für eine Weile Nährstoffe\nüber den Samen auf seinem Rücken auf.","language":{"name":"de","url":"https://pokeapi.co/api/v2/language/6/"},"version":{"name":"y","url":"https://pokeapi.co/api/v2/version/24/"}},{"flavor_text":"Después de nacer, crece alimentándose de las\nsemillas de su lomo.","language":{"name":"es","url":"https://pokeapi.co/api/v2/language/7/"},"version":{"name":"y","url":"https://pokeapi.co/api/v2/version/24/"}},{"flavor_text":"Dopo la nascita, cresce traendo nutrimento dal seme\npiantato sul suo dorso.","language":{"name":"it","url":"https://pokeapi.co/api/v2/language/8/"},"version":{"name":"y","url":"https://pokeapi.co/api/v2/version/24/"}},{"flavor_text":"For some time after its birth, it grows by gaining\nnourishment from the seed on its back.","language":{"name":"en","url":"https://pokeapi.co/api/v2/language/9/"},"version":{"name":"y","url":"https://pokeapi.co/api/v2/version/24/"}},{"flavor_text":"生まれてから　しばらくの　あいだは\n背中の　タネから　栄養を　もらって\n大きく　育つ。","language":{"name":"ja","url":"https://pokeapi.co/api/v2/language/11/"},"version":{"name":"y","url":"https://pokeapi.co/api/v2/version/24/"}},{"flavor_te... (set the log level to DEBUG or TRACE to see the full content) 
+ </msg>
+<msg timestamp="20220830 22:29:22.617" level="INFO">B:\Python\Python39\lib\site-packages\urllib3\connectionpool.py:1045: InsecureRequestWarning: Unverified HTTPS request is being made to host 'pokeapi.co'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220830 22:29:22.617" level="INFO">${RESPOSTA} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220830 22:29:22.522" endtime="20220830 22:29:22.617"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${RESPOSTA}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220830 22:29:22.618" level="INFO">${RESPOSTA} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220830 22:29:22.617" endtime="20220830 22:29:22.618"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${NOME}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220830 22:29:22.618" level="INFO">${NOME} = bulbasaur</msg>
+<status status="PASS" starttime="20220830 22:29:22.618" endtime="20220830 22:29:22.618"/>
+</kw>
+<status status="PASS" starttime="20220830 22:29:22.521" endtime="20220830 22:29:22.618"/>
+</kw>
+<kw name="Confere status code" library="Poke">
+<arg>200</arg>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${RESPOSTA.status_code}</arg>
+<arg>${STATUS}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20220830 22:29:22.619" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20220830 22:29:22.619" endtime="20220830 22:29:22.619"/>
+</kw>
+<status status="PASS" starttime="20220830 22:29:22.618" endtime="20220830 22:29:22.619"/>
+</kw>
+<status status="PASS" starttime="20220830 22:29:22.521" endtime="20220830 22:29:22.619"/>
+</kw>
+<status status="PASS" starttime="20220830 22:29:22.520" endtime="20220830 22:29:22.620"/>
+</test>
+<status status="PASS" starttime="20220830 22:29:22.334" endtime="20220830 22:29:22.621"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Poke">Poke</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

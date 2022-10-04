@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.11 on win32)" generated="20220829 22:33:51.713" rpa="false" schemaversion="3">
+<suite id="s1" name="Teste" source="C:\Users\MainUser\Desktop\Testing\Teste.robot">
+<test id="s1-t1" name="Processo de compra de um pacote de viagens" line="7">
+<kw name="Dado que eu estou no site do Hurb" library="Hurb">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${SITE}</arg>
+<arg>${NAVEGADOR}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220829 22:33:52.548" level="INFO">Opening browser 'Chrome' to base url 'https://www.hurb.com/br'.</msg>
+<status status="PASS" starttime="20220829 22:33:52.548" endtime="20220829 22:33:58.120"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220829 22:33:58.120" endtime="20220829 22:33:58.249"/>
+</kw>
+<status status="PASS" starttime="20220829 22:33:52.547" endtime="20220829 22:33:58.249"/>
+</kw>
+<kw name="Quando aceito os cookies do site" library="Hurb">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220829 22:34:00.253" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220829 22:33:58.250" endtime="20220829 22:34:00.253"/>
+</kw>
+<kw name="Wait and Click" library="Hurb">
+<arg>${BOTAO_COOKIES}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ELEMENTO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220829 22:34:00.253" endtime="20220829 22:34:00.275"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${ELEMENTO}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220829 22:34:00.275" endtime="20220829 22:34:00.294"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ELEMENTO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220829 22:34:00.294" level="INFO">Clicking element 'xpath=//*[@id="CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll"]'.</msg>
+<status status="PASS" starttime="20220829 22:34:00.294" endtime="20220829 22:34:00.333"/>
+</kw>
+<status status="PASS" starttime="20220829 22:34:00.253" endtime="20220829 22:34:00.333"/>
+</kw>
+<status status="PASS" starttime="20220829 22:33:58.250" endtime="20220829 22:34:00.333"/>
+</kw>
+<kw name="E busco por um pacote de viagens para comprar Buenos Aires" library="Hurb">
+<kw name="Wait and Click" library="Hurb">
+<arg>${BOTAO_PACOTES}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ELEMENTO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220829 22:34:00.334" endtime="20220829 22:34:00.352"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${ELEMENTO}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220829 22:34:00.352" endtime="20220829 22:34:00.374"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ELEMENTO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220829 22:34:00.374" level="INFO">Clicking element 'xpath=//*[@id="__next"]/div[1]/div[2]/div/div/div[1]/div/div/button[2]'.</msg>
+<status status="PASS" starttime="20220829 22:34:00.374" endtime="20220829 22:34:00.416"/>
+</kw>
+<status status="PASS" starttime="20220829 22:34:00.334" endtime="20220829 22:34:00.416"/>
+</kw>
+<kw name="Wait and Input Text" library="Hurb">
+<arg>${CAMPO_BUSCAR_DESTINO}</arg>
+<arg>${DESTINO}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ELEMENTO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220829 22:34:00.417" endtime="20220829 22:34:00.433"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${ELEMENTO}</arg>
+<arg>${TEXTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220829 22:34:00.433" level="INFO">Typing text 'Buenos Aires' into text field 'xpath=//*[@id="destination-input"]'.</msg>
+<status status="PASS" starttime="20220829 22:34:00.433" endtime="20220829 22:34:00.553"/>
+</kw>
+<status status="PASS" starttime="20220829 22:34:00.416" endtime="20220829 22:34:00.553"/>
+</kw>
+<kw name="Wait and Click" library="Hurb">
+<arg>${BOTA_PESQUISAR}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ELEMENTO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220829 22:34:00.554" endtime="20220829 22:34:00.577"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${ELEMENTO}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220829 22:34:00.577" endtime="20220829 22:34:00.597"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ELEMENTO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220829 22:34:00.597" level="INFO">Clicking element 'xpath=//*[@id="__next"]/div[1]/div[2]/div/div/div[2]/button'.</msg>
+<status status="PASS" starttime="20220829 22:34:00.597" endtime="20220829 22:34:02.277"/>
+</kw>
+<status status="PASS" starttime="20220829 22:34:00.553" endtime="20220829 22:34:02.278"/>
+</kw>
+<status status="PASS" starttime="20220829 22:34:00.334" endtime="20220829 22:34:02.278"/>
+</kw>
+<kw name="E seleciono o primeiro resultado" library="Hurb">
+<kw name="Wait and Click" library="Hurb">
+<arg>${RESULTADO}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ELEMENTO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220829 22:34:02.279" endtime="20220829 22:34:02.298"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${ELEMENTO}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220829 22:34:02.298" endtime="20220829 22:34:02.315"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ELEMENTO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220829 22:34:02.316" level="INFO">Clicking element 'xpath=//*[@id="__next"]/div/main/section/div[2]/a[1]/div[2]/div[1]/h3'.</msg>
+<status status="PASS" starttime="20220829 22:34:02.315" endtime="20220829 22:34:02.389"/>
+</kw>
+<status status="PASS" starttime="20220829 22:34:02.278" endtime="20220829 22:34:02.389"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20220829 22:34:02.389" endtime="20220829 22:34:02.397"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Buenos Aires</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220829 22:34:03.709" level="INFO">Current page contains text 'Buenos Aires'.</msg>
+<status status="PASS" starttime="20220829 22:34:02.397" endtime="20220829 22:34:03.709"/>
+</kw>
+<status status="PASS" starttime="20220829 22:34:02.278" endtime="20220829 22:34:03.709"/>
+</kw>
+<kw name="Escolher pacote" library="Hurb">
+<kw name="Wait and Click" library="Hurb">
+<arg>${PACOTE_SELECIONADO}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ELEMENTO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220829 22:34:03.710" endtime="20220829 22:34:03.730"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${ELEMENTO}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220829 22:34:03.730" endtime="20220829 22:34:03.752"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ELEMENTO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220829 22:34:03.753" level="INFO">Clicking element 'xpath=//*[@id="__next"]/div/main/div[3]/aside/div/div/div[2]/button'.</msg>
+<status status="PASS" starttime="20220829 22:34:03.753" endtime="20220829 22:34:03.882"/>
+</kw>
+<status status="PASS" starttime="20220829 22:34:03.710" endtime="20220829 22:34:03.883"/>
+</kw>
+<status status="PASS" starttime="20220829 22:34:03.710" endtime="20220829 22:34:03.883"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220829 22:34:03.883" endtime="20220829 22:34:06.083"/>
+</kw>
+<status status="PASS" starttime="20220829 22:33:52.547" endtime="20220829 22:34:06.084"/>
+</test>
+<status status="PASS" starttime="20220829 22:33:51.714" endtime="20220829 22:34:06.085"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Teste">Teste</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
